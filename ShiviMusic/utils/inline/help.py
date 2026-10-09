@@ -56,18 +56,11 @@ def help_back_markup(_):
 
 
 def start_help_markup(_):
-    import config
-
     return InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url=config.SUPPORT_CHAT),
-                InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇs", url=config.SUPPORT_CHANNEL),
-            ],
-            [
-                InlineKeyboardButton(text="Oᴡɴᴇʀ", url=f"tg://user?id={config.OWNER_ID}"),
-                InlineKeyboardButton(text="Bᴀᴄᴋ", callback_data="settings_back_helper"),
-            ],
+                InlineKeyboardButton(text=_["BACK_BUTTON"], callback_data="settings_back_helper"),
+            ]
         ]
     )
 
